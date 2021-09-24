@@ -15,6 +15,11 @@ def home():
 def get_brands():
     return jsonify(Data)
 
+@app.route('/subtraction/<int:a>/<int:b>')
+def subtraction(a,b):
+    return jsonify({'Answer':abs(a-b)})
+
+
 @app.route('/products/<brand>')
 def get_list_items(brand):
     items=requests.get('http://127.0.0.1:5001/products/{}'.format(brand))
