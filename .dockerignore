@@ -1,0 +1,6 @@
+.git
+*.md
+!README*.md
+README-secret.md
+*/*/__pycache__*
+*/*/node_modules*
