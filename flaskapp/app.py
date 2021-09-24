@@ -15,6 +15,9 @@ def home():
 def get_brands():
     return jsonify(Data)
 
+@app.route('/brands/addition/<int:a>/<int:b>')
+def addition(a,b):
+    return jsonify({'Result':a+b})
 
 @app.route('/products/<brand>')
 def get_list_items(brand):
