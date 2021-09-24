@@ -15,6 +15,10 @@ def home():
 def get_brands():
     return jsonify(Data)
 
+@app.route('/brands/addition/<int:a>/<int:b>')
+def addition(a,b):
+    return jsonify({'Result':a+b})
+
 @app.route('/products/<brand>')
 def get_list_items(brand):
     items=requests.get('http://127.0.0.1:5001/products/{}'.format(brand))
