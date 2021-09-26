@@ -43,3 +43,11 @@ function searchElement(request, response) {
 	response.send(reply);
 }
 
+
+app.get('/', homepage);
+
+function homepage(request, response) {
+	
+	var reply={"Made By":"Adithya Narayan","Roll Number":"19BBS0068","Type":"Node JS Microservice"}
+	response.send(reply);
+}
